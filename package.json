@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "author": "diaoruihao <diaoruihao@apusapps.com>",
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build",
+    "format": "prettier --cache --write .",
+    "prepare": "husky install",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.4",
+    "@ant-design/pro-components": "^2.6.50",
+    "@umijs/max": "^4.1.2",
+    "antd": "^5.15.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.12",
+    "typescript": "^5.4.2"
+  }
+}
