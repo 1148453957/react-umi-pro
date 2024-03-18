@@ -1,4 +1,5 @@
 {
+  "name": "novel",
   "private": true,
   "author": "diaoruihao <diaoruihao@apusapps.com>",
   "scripts": {
@@ -11,13 +12,19 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.4",
-    "@ant-design/pro-components": "^2.6.50",
+    "@ant-design/icons": "^5.3.1",
+    "@ant-design/pro-components": "^2.6.49",
+    "@types/js-cookie": "^3.0.6",
+    "@types/md5": "^2.3.5",
     "@umijs/max": "^4.1.2",
-    "antd": "^5.15.3"
+    "antd": "^5.15.2",
+    "js-cookie": "^3.0.5",
+    "md5": "^2.3.0",
+    "qs": "^6.12.0",
+    "thinkingdata-browser": "^2.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
+    "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.22",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",

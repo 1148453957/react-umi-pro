@@ -6,9 +6,6 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
-  layout: {
-    title: '@umijs/max',
-  },
   routes: [
     {
       path: '/',
@@ -31,5 +28,10 @@ export default defineConfig({
     },
   ],
   npmClient: 'pnpm',
+  title: '萤火小说',
+  favicons: ['/logo.webp'],
+  targets: { chrome: 68 },
+  alias: {
+    '@': './src',
+  },
 });
-
