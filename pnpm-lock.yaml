@@ -17,18 +17,30 @@ dependencies:
   '@types/md5':
     specifier: ^2.3.5
     version: 2.3.5
+  '@types/pako':
+    specifier: ^2.0.3
+    version: 2.0.3
   '@umijs/max':
     specifier: ^4.1.2
     version: 4.1.2(@babel/core@7.24.0)(@types/react-dom@18.2.22)(@types/react@18.2.65)(dva@2.5.0-beta.2)(prettier@3.2.5)(rc-field-form@1.43.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.2)(webpack@5.90.3)
   antd:
     specifier: ^5.15.2
     version: 5.15.2(react-dom@18.2.0)(react@18.2.0)
+  classnames:
+    specifier: ^2.5.1
+    version: 2.5.1
+  crypto-js:
+    specifier: ^4.2.0
+    version: 4.2.0
   js-cookie:
     specifier: ^3.0.5
     version: 3.0.5
   md5:
     specifier: ^2.3.0
     version: 2.3.0
+  pako:
+    specifier: ^2.1.0
+    version: 2.1.0
   qs:
     specifier: ^6.12.0
     version: 6.12.0
@@ -2481,6 +2493,10 @@ packages:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
     dev: false
 
+  /@types/pako@2.0.3:
+    resolution: {integrity: sha512-bq0hMV9opAcrmE0Byyo0fY3Ew4tgOevJmQ9grUhpXQhYfyLJ1Kqg3P33JT5fdbT2AjeAjR51zqqVjAL/HMkx7Q==}
+    dev: false
+
   /@types/parse-json@4.0.2:
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
     dev: false
@@ -4403,6 +4419,10 @@ packages:
       public-encrypt: 4.0.3
       randombytes: 2.1.0
       randomfill: 1.0.4
+    dev: false
+
+  /crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
     dev: false
 
   /css-blank-pseudo@3.0.3(postcss@8.4.35):
@@ -7452,6 +7472,10 @@ packages:
 
   /pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
+    dev: false
+
+  /pako@2.1.0:
+    resolution: {integrity: sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==}
     dev: false
 
   /param-case@3.0.4:

@@ -9,7 +9,7 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      redirect: '/ShelfPage',
     },
     {
       name: '首页',
@@ -17,14 +17,14 @@ export default defineConfig({
       component: './Home',
     },
     {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
+      name: '阅读页',
+      path: '/ReadPage',
+      component: './ReadPage',
     },
     {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
+      name: '书架页',
+      path: '/ShelfPage',
+      component: './ShelfPage',
     },
   ],
   npmClient: 'pnpm',

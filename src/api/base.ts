@@ -33,8 +33,6 @@ export function http(value: any) {
     ...value,
     requestInterceptors: [
       async function (config: any) {
-        console.log(11111, arguments);
-
         const whiteList = ['v2/user/register', 'v2/user/verifycode'];
         if (
           Cookies.get('phoneLogin') &&
@@ -45,27 +43,18 @@ export function http(value: any) {
         }
         return config;
       },
-      function (error:any) {
-        // 对请求错误做些什么
-        return Promise.reject(error);
-      },
     ],
 
     responseInterceptors: [
-      async function (response) {
+      async function (response: any) {
         if (
           response.data.code == 601 &&
-         process.env.UMI_APP_RUN_ENV != 'local'
+          process.env.UMI_APP_RUN_ENV != 'local'
         ) {
           await reLogin();
         }
+        //  return Promise.reject('error')
         return response;
-      },
-      function (error) {
-        // 超出 2xx 范围的状态码都会触发该函数。
-        // 对响应错误做点什么
-        // 会走到catch里面
-        return Promise.reject(error);
       },
     ],
   });
@@ -95,6 +84,6 @@ export const initRBIData = {
 
 /**正式域名 */
 export const homeUrl =
- process.env.UMI_APP_RUN_ENV == 'prod'
+  process.env.UMI_APP_RUN_ENV == 'prod'
     ? 'https://novel-landing.zzpeishuang.com'
     : 'https://landing.sibenz.cn';
