@@ -1,0 +1,259 @@
+.shelf_container {
+  width: 100%;
+  height: 100%;
+  background-color: #ff752b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('@/assets/img/pages/shelf_bg.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  .shelf_content {
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+    overflow-y: auto;
+
+    .content_top {
+      width: calc(100% - 32px);
+      background: rgba(255, 255, 255, 0.96);
+      height: 148px;
+      margin: 0 16px;
+      border-radius: 16px 16px 0 0;
+      overflow: hidden;
+
+      .swipe_box {
+        width: 100%;
+        height: 148px;
+        overflow: hidden;
+
+        .swipeItem {
+          display: flex !important;
+          width: 100%;
+          height: 100%;
+          padding: 16px;
+
+          .swiper_image {
+            width: 76px;
+            height: 102px;
+            border-radius: 8px;
+            margin-right: 10px;
+            overflow: hidden;
+          }
+
+          .swiper_right {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            height: 102px;
+            justify-content: space-between;
+          }
+
+          .swiper_text {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-family: SourceHanSansCN-Regular;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            font-weight: 400;
+            font-size: 12px;
+            color: #000000;
+
+            &.top {
+              font-weight: 700;
+              font-size: 17px;
+            }
+
+            &.center {
+              height: auto;
+              color: rgba(0, 0, 0, 0.5);
+              -webkit-line-clamp: 2;
+            }
+
+            &.bottom {
+              span {
+                display: inline-block;
+                width: 1px;
+                height: 12px;
+                background: #dfdfdf;
+                margin: 0 10px;
+              }
+            }
+          }
+        }
+        .dot_item {
+          li {
+            width: 6px;
+            height: 6px;
+            background: #d8d8d8;
+            border-radius: 3px;
+            overflow: hidden;
+            button {
+              background: #d8d8d8;
+            }
+            &.slick-active {
+              background: #ff3c3c;
+              button {
+                background: #ff3c3c;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content_list {
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 -2px 11px 0 rgba(255, 148, 75, 0.1);
+      border-radius: 10px 10px 0 0;
+      padding: 16px 16px 0;
+      min-height: calc(100% - 148px);
+
+      .list_title {
+        height: 16px;
+        font-family: SourceHanSansCN-Medium;
+        font-weight: bold;
+        font-size: 16px;
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .edit_box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+          }
+
+          .edit_btn {
+            margin: 0 10px;
+            height: 20px;
+            line-height: 20px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: 700;
+            font-size: 12px;
+            color: #ff4d3e;
+          }
+
+          .edit_line {
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            background: #dfdfdf;
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .list_box {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        row-gap: 30px;
+
+        .list_item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .item_img {
+            width: 100%;
+            position: relative;
+            height: auto;
+            display: flex;
+
+            :deep(.img_cover) {
+              width: 100%;
+              height: auto;
+
+              .van-image__error {
+                height: auto;
+                position: relative;
+                display: inline-block;
+
+                img {
+                  width: 100%;
+                }
+              }
+            }
+
+            .check {
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: 3;
+            }
+
+            .img_title {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              z-index: 2;
+
+              width: 100px;
+              height: 20px;
+              line-height: 20px;
+              opacity: 0.6;
+              background-image: linear-gradient(
+                270deg,
+                rgba(0, 0, 0, 0) 0%,
+                #000000 100%
+              );
+              padding-left: 10px;
+              color: rgba(255, 255, 255, 0.8);
+              font-weight: 400;
+              font-size: 10px;
+            }
+          }
+
+          .item_describe {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+            .item_title {
+              height: 20px;
+              line-height: 20px;
+              font-family: SourceHanSansCN-Medium;
+              font-weight: 500;
+              font-size: 15px;
+              color: #000000;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .item_author {
+              height: 20px;
+              line-height: 20px;
+              font-family: SourceHanSansCN-Regular;
+              font-weight: 400;
+              font-size: 12px;
+              color: #ff441e;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}

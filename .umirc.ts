@@ -26,6 +26,11 @@ export default defineConfig({
       path: '/ShelfPage',
       component: './ShelfPage',
     },
+    {
+      name: '视频页',
+      path: '/VideoPage',
+      component: './VideoPage',
+    },
   ],
   npmClient: 'pnpm',
   title: '萤火小说',

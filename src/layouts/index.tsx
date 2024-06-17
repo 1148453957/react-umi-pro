@@ -17,11 +17,26 @@ import React, { useEffect, useState } from 'react';
 import ta from 'thinkingdata-browser';
 import './index.less';
 const App = () => {
+  // 每次set赋值的时候都会执行啊
   let openViewFlag = false;
-  const [active, setActive] = useState('');
+  // const [active, setActive] = useState('');
   const [loginFail, setLoginFail] = useState(false);
   const [initLoading, setInitLoading] = useState(false);
   const location = useLocation();
+  let active = location.pathname;
+  const pageActive = [
+    '/ShelfPage',
+    '/BenefitPage',
+    '/AccountPage',
+    '/VideoPage',
+    '/ExchangePage',
+  ].includes(location.pathname);
+  if (active === '/ShelfPage') {
+    sendRBI('XWEB_CLICK', {
+      name: 'bookshelf_encourage_show',
+      container: Cookies.get('userId'),
+    });
+  }
   // 如果是微信浏览器，就展示引导页，去其他浏览器查看
 
   let ua = navigator.userAgent.toLowerCase();
@@ -31,7 +46,7 @@ const App = () => {
 
   useEffect(() => {
     // 第一次进来时才登录，页面刷新的时候不需要重新登录
-    if (Cookies.get('userId')) {
+    if (!Cookies.get('userId')) {
       // 第一次进页面
       setInitLoading(true);
       login({
@@ -111,7 +126,7 @@ const App = () => {
   const refresh = () => {
     window.location.reload();
   };
-
+  /* 
   useEffect(() => {
     console.log('路由发生变化了:', location);
     // 这里你可以执行你想要在路由变化时执行的逻辑
@@ -124,31 +139,15 @@ const App = () => {
         container: Cookies.get('userId'),
       });
     }
-  }, [location.pathname]);
+  }, [location.pathname]); */
 
+  function tabChangeFn() {
+    // console.log(111111,arguments);
+  }
 
-
-
-function tabChangeFn() {
-  console.log(111111,arguments);
-  
-}
-
-function tabClickFn() {
-  console.log(22222,arguments);
-  
-}
-
-
-
-
-
-
-
-
-
-
-
+  function tabClickFn(path: string) {
+    history.push(path);
+  }
 
   function turnToBenefit(e: any) {
     e.stopPropagation();
@@ -202,29 +201,37 @@ function tabClickFn() {
             onTabClick={tabClickFn}
             items={[
               {
-                label: 'ShelfPage',
+                label: '书架',
                 key: '/ShelfPage',
               },
               {
-                label: 'VideoPage',
+                label: '视频',
                 key: '/VideoPage',
               },
               {
-                label: 'BenefitPage',
+                label: '福利',
                 key: '/BenefitPage',
               },
               {
-                label: 'ExchangePage',
+                label: '权益兑换',
                 key: '/ExchangePage',
               },
               {
-                label: 'AccountPage',
+                label: '我的',
                 key: '/AccountPage',
               },
             ]}
           />
+          <div
+            className={classnames({
+              container: true,
+              active: pageActive,
+            })}
+          >
+            
+            <Outlet />
+          </div>
 
-          <Outlet />
           {active === '/ShelfPage' && (
             <div className="coin_more" onClick={turnToBenefit}>
               <img className="coin" src={coinUrl} />
