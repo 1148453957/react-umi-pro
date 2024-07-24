@@ -20,6 +20,9 @@ dependencies:
   '@types/pako':
     specifier: ^2.0.3
     version: 2.0.3
+  '@types/uuid':
+    specifier: ^9.0.8
+    version: 9.0.8
   '@umijs/max':
     specifier: ^4.1.2
     version: 4.1.2(@babel/core@7.24.0)(@types/react-dom@18.2.22)(@types/react@18.2.65)(dva@2.5.0-beta.2)(prettier@3.2.5)(rc-field-form@1.43.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.2)(webpack@5.90.3)
@@ -32,6 +35,9 @@ dependencies:
   crypto-js:
     specifier: ^4.2.0
     version: 4.2.0
+  dayjs:
+    specifier: ^1.11.11
+    version: 1.11.11
   js-cookie:
     specifier: ^3.0.5
     version: 3.0.5
@@ -47,6 +53,9 @@ dependencies:
   thinkingdata-browser:
     specifier: ^2.0.0
     version: 2.0.0
+  uuid:
+    specifier: ^10.0.0
+    version: 10.0.0
 
 devDependencies:
   '@types/react':
@@ -320,7 +329,7 @@ packages:
       '@chenshuai2144/sketch-color': 1.0.9(react@18.2.0)
       antd: 4.24.15(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.tonumber: 4.0.3
       omit.js: 2.0.2
       rc-util: 5.39.1(react-dom@18.2.0)(react@18.2.0)
@@ -343,7 +352,7 @@ packages:
       '@chenshuai2144/sketch-color': 1.0.9(react@18.2.0)
       antd: 5.15.2(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.tonumber: 4.0.3
       omit.js: 2.0.2
       rc-util: 5.39.1(react-dom@18.2.0)(react@18.2.0)
@@ -374,7 +383,7 @@ packages:
       '@umijs/use-params': 1.0.9(react@18.2.0)
       antd: 4.24.15(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.merge: 4.6.2
       omit.js: 2.0.2
       rc-field-form: 1.43.0(react-dom@18.2.0)(react@18.2.0)
@@ -405,7 +414,7 @@ packages:
       '@umijs/use-params': 1.0.9(react@18.2.0)
       antd: 5.15.2(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.merge: 4.6.2
       omit.js: 2.0.2
       rc-field-form: 1.43.0(react-dom@18.2.0)(react@18.2.0)
@@ -482,7 +491,7 @@ packages:
       '@babel/runtime': 7.24.0
       antd: 4.24.15(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       rc-resize-observer: 1.4.0(react-dom@18.2.0)(react@18.2.0)
       rc-util: 4.21.1
       react: 18.2.0
@@ -507,7 +516,7 @@ packages:
       '@babel/runtime': 7.24.0
       antd: 5.15.2(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       rc-resize-observer: 1.4.0(react-dom@18.2.0)(react@18.2.0)
       rc-util: 4.21.1
       react: 18.2.0
@@ -598,7 +607,7 @@ packages:
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
       antd: 4.24.15(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.merge: 4.6.2
       omit.js: 2.0.2
       rc-field-form: 1.43.0(react-dom@18.2.0)(react@18.2.0)
@@ -631,7 +640,7 @@ packages:
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
       antd: 5.15.2(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.merge: 4.6.2
       omit.js: 2.0.2
       rc-field-form: 1.43.0(react-dom@18.2.0)(react@18.2.0)
@@ -655,7 +664,7 @@ packages:
       '@babel/runtime': 7.24.0
       antd: 4.24.15(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.merge: 4.6.2
       rc-util: 5.39.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
@@ -676,7 +685,7 @@ packages:
       '@babel/runtime': 7.24.0
       antd: 5.15.2(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       lodash.merge: 4.6.2
       rc-util: 5.39.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
@@ -2555,6 +2564,10 @@ packages:
     resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==}
     dev: false
 
+  /@types/uuid@9.0.8:
+    resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
+    dev: false
+
   /@types/yargs-parser@21.0.3:
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
     dev: false
@@ -3039,11 +3052,11 @@ packages:
       '@tanstack/react-query-devtools': 4.36.1(@tanstack/react-query@4.36.1)(react-dom@18.2.0)(react@18.2.0)
       '@umijs/bundler-utils': 4.1.2
       '@umijs/valtio': 1.0.4(@types/react@18.2.65)(react@18.2.0)
-      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.10)
+      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.11)
       axios: 0.27.2
       babel-plugin-import: 1.13.8
       babel-plugin-styled-components: 2.1.4(@babel/core@7.24.0)(styled-components@6.1.1)
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       dva-core: 2.0.4(redux@4.2.1)
       dva-immer: 1.0.1(dva@2.5.0-beta.2)
       dva-loading: 3.0.24(dva-core@2.0.4)
@@ -3489,12 +3502,12 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /antd-dayjs-webpack-plugin@1.0.6(dayjs@1.11.10):
+  /antd-dayjs-webpack-plugin@1.0.6(dayjs@1.11.11):
     resolution: {integrity: sha512-UlK3BfA0iE2c5+Zz/Bd2iPAkT6cICtrKG4/swSik5MZweBHtgmu1aUQCHvICdiv39EAShdZy/edfP6mlkS/xXg==}
     peerDependencies:
       dayjs: '*'
     dependencies:
-      dayjs: 1.11.10
+      dayjs: 1.11.11
     dev: false
 
   /antd@4.24.15(react-dom@18.2.0)(react@18.2.0):
@@ -3568,7 +3581,7 @@ packages:
       '@rc-component/trigger': 2.0.0(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
       copy-to-clipboard: 3.3.3
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       qrcode.react: 3.1.0(react@18.2.0)
       rc-cascader: 3.24.0(react-dom@18.2.0)(react@18.2.0)
       rc-checkbox: 3.2.0(react-dom@18.2.0)(react@18.2.0)
@@ -3585,7 +3598,7 @@ packages:
       rc-motion: 2.9.0(react-dom@18.2.0)(react@18.2.0)
       rc-notification: 5.3.0(react-dom@18.2.0)(react@18.2.0)
       rc-pagination: 4.0.4(react-dom@18.2.0)(react@18.2.0)
-      rc-picker: 4.3.0(dayjs@1.11.10)(react-dom@18.2.0)(react@18.2.0)
+      rc-picker: 4.3.0(dayjs@1.11.11)(react-dom@18.2.0)(react@18.2.0)
       rc-progress: 3.5.1(react-dom@18.2.0)(react@18.2.0)
       rc-rate: 2.12.0(react-dom@18.2.0)(react@18.2.0)
       rc-resize-observer: 1.4.0(react-dom@18.2.0)(react@18.2.0)
@@ -4559,8 +4572,8 @@ packages:
       '@babel/runtime': 7.24.0
     dev: false
 
-  /dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+  /dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
     dev: false
 
   /debug@4.3.4:
@@ -8738,7 +8751,7 @@ packages:
       '@babel/runtime': 7.24.0
       classnames: 2.5.1
       date-fns: 2.30.0
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       moment: 2.30.1
       rc-trigger: 5.3.4(react-dom@18.2.0)(react@18.2.0)
       rc-util: 5.39.1(react-dom@18.2.0)(react@18.2.0)
@@ -8747,7 +8760,7 @@ packages:
       shallowequal: 1.1.0
     dev: false
 
-  /rc-picker@4.3.0(dayjs@1.11.10)(react-dom@18.2.0)(react@18.2.0):
+  /rc-picker@4.3.0(dayjs@1.11.11)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-bQNB/+NdW55jlQ5lPnNqF5J90Tq4SihLbAF7tzPBvGDJyoYmDgwLm4FN0ZB3Ot9i1v6vJY/1mgqZZTT9jbYc5w==}
     engines: {node: '>=8.x'}
     peerDependencies:
@@ -8770,7 +8783,7 @@ packages:
       '@babel/runtime': 7.24.0
       '@rc-component/trigger': 2.0.0(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.5.1
-      dayjs: 1.11.10
+      dayjs: 1.11.11
       rc-overflow: 1.3.2(react-dom@18.2.0)(react@18.2.0)
       rc-resize-observer: 1.4.0(react-dom@18.2.0)(react@18.2.0)
       rc-util: 5.39.1(react-dom@18.2.0)(react@18.2.0)
@@ -10861,6 +10874,11 @@ packages:
 
   /utila@0.4.0:
     resolution: {integrity: sha512-Z0DbgELS9/L/75wZbro8xAnT50pBVFQZ+hUEueGDU5FN51YSCYM+jdxsfCiHjwNP/4LCDD0i/graKpeBnOXKRA==}
+    dev: false
+
+  /uuid@10.0.0:
+    resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    hasBin: true
     dev: false
 
   /v8-compile-cache@2.4.0:

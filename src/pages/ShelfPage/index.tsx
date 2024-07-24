@@ -107,7 +107,7 @@ const ShelfPage = () => {
           type: item.bookId,
         });
       }
-      history.push('/ReadPage', { bkid: item.bookId });
+      history.push('/ReadPage?bkid=' + item.bookId);
     }
   };
   const clearEdit = () => {

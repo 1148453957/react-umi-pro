@@ -77,13 +77,13 @@ const HomePage = () => {
 
             // 如果没有userid，还没有登录，阅读页在登录后跳入阅读页，其他页面统一回跳书架页
             if (sessionStorage.getItem('turnToReadPage')) {
+              history.push(
+                '/ReadPage?bkid=' + sessionStorage.getItem('turnToReadPage'),
+              );
 
-              history.push('/ReadPage', {
-                bkid: sessionStorage.getItem('turnToReadPage'),
-              });
-                sessionStorage.setItem('turnToReadPage', '');
+              sessionStorage.setItem('turnToReadPage', '');
             } else {
-            history.push('/ShelfPage')
+              history.push('/ShelfPage');
             }
             setTimeout(() => {
               setInitLoading(false);

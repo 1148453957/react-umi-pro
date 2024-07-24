@@ -121,8 +121,6 @@ export function timeSave(data: any) {
 
 /**获取视频列表 */
 export function getVideoList(data: any) {
-  console.log('获取视频列表，/novel/video/list', data)
-
   return http({
     url: `${apiDomain}/novel/video/list`,
     method: 'post',

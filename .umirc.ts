@@ -30,6 +30,10 @@ export default defineConfig({
       name: '视频页',
       path: '/VideoPage',
       component: './VideoPage',
+    }, {
+      name: '视频播放页',
+      path: '/PlayPage',
+      component: './VideoPage/PlayPage',
     },
   ],
   npmClient: 'pnpm',
